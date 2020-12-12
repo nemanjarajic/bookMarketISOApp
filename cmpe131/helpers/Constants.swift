@@ -11,5 +11,6 @@ struct Constants{
     struct Storyboard{
         static let appTabBarContoller = "itemVC"
         static let returnToLogin = "viewVC"
+        static let bookDetailViewController = "bookDetailVC"
     }
 }
