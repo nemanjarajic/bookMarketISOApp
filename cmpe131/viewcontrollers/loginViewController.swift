@@ -38,7 +38,7 @@ class loginViewController: UIViewController{
         Auth.auth().signIn(withEmail: email, password: pwd) { (result,error) in
             
             if error != nil{
-                self.errorMessage.text = "Error signing in"
+                self.showError("Error signing in")
             }else{
                 self.transitionToHome()
             }
@@ -48,8 +48,14 @@ class loginViewController: UIViewController{
     }
     
     func transitionToHome(){
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewContoller) as? HomeViewController
-        view.window?.rootViewController = homeViewController
+        let appTabBarController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.appTabBarContoller) as? appTabBarController
+        view.window?.rootViewController = appTabBarController
         view.window?.makeKeyAndVisible()
+    }
+    
+    func showError(_ message: String) {
+        errorMessage.text = message
+        errorMessage.alpha = 1
+        
     }
 }

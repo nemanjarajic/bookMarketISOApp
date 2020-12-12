@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7DE0F846743565D9FA707FA9 /* Pods_cmpe131_cmpe131UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5A4BF29E2A0A4F5380DD3D /* Pods_cmpe131_cmpe131UITests.framework */; };
 		AFC04E4B6361056CE4AA244F /* Pods_cmpe131.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5AF60F6BA9D474E6BFA6B9 /* Pods_cmpe131.framework */; };
+		F7383D3D25833AC000B284B3 /* forSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7383D3C25833AC000B284B3 /* forSaleViewController.swift */; };
 		F7505B7B257C88C600B13FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7505B7A257C88C600B13FAA /* AppDelegate.swift */; };
 		F7505B7D257C88C600B13FAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7505B7C257C88C600B13FAA /* SceneDelegate.swift */; };
 		F7505B7F257C88C600B13FAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7505B7E257C88C600B13FAA /* ViewController.swift */; };
@@ -23,6 +24,15 @@
 		F7552B48257D8FBF001EA28F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7552B47257D8FBF001EA28F /* GoogleService-Info.plist */; };
 		F764155C257C99A100CE179E /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F764155B257C99A100CE179E /* loginViewController.swift */; };
 		F7641561257CA0C500CE179E /* createAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7641560257CA0C500CE179E /* createAccountViewController.swift */; };
+		F7A894D2258412DD00B24A67 /* detailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A894D1258412DD00B24A67 /* detailTableView.swift */; };
+		F7A894DA2584214700B24A67 /* seller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A894D92584214700B24A67 /* seller.swift */; };
+		F7ED171A258166250043D94F /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED1719258166250043D94F /* tableViewCell.swift */; };
+		F7ED171F25818E5E0043D94F /* book.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED171E25818E5E0043D94F /* book.swift */; };
+		F7FF4373257DE748001B347C /* appTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF4372257DE748001B347C /* appTabBarController.swift */; };
+		F7FF4378257DEDE0001B347C /* accountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF4377257DEDDF001B347C /* accountViewController.swift */; };
+		F7FF4388257EB34F001B347C /* searchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF4387257EB34F001B347C /* searchViewController.swift */; };
+		F7FF4398257ECF49001B347C /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FF4396257ECF49001B347C /* NewTableViewCell.swift */; };
+		F7FF4399257ECF49001B347C /* NewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7FF4397257ECF49001B347C /* NewTableViewCell.xib */; };
 		F81F8E1580A915E25861116D /* Pods_cmpe131Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C195CF09438DDF28A83FE22D /* Pods_cmpe131Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +61,7 @@
 		C195CF09438DDF28A83FE22D /* Pods_cmpe131Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmpe131Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EC3532ED683347BCBDF9A5 /* Pods-cmpe131Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmpe131Tests.release.xcconfig"; path = "Target Support Files/Pods-cmpe131Tests/Pods-cmpe131Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DAC3E8AE827733E8054DB32A /* Pods-cmpe131Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmpe131Tests.debug.xcconfig"; path = "Target Support Files/Pods-cmpe131Tests/Pods-cmpe131Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7383D3C25833AC000B284B3 /* forSaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forSaleViewController.swift; sourceTree = "<group>"; };
 		F7505B77257C88C600B13FAA /* cmpe131.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cmpe131.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7505B7A257C88C600B13FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7505B7C257C88C600B13FAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +83,15 @@
 		F7552B47257D8FBF001EA28F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F764155B257C99A100CE179E /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		F7641560257CA0C500CE179E /* createAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createAccountViewController.swift; sourceTree = "<group>"; };
+		F7A894D1258412DD00B24A67 /* detailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailTableView.swift; sourceTree = "<group>"; };
+		F7A894D92584214700B24A67 /* seller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seller.swift; sourceTree = "<group>"; };
+		F7ED1719258166250043D94F /* tableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		F7ED171E25818E5E0043D94F /* book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = book.swift; sourceTree = "<group>"; };
+		F7FF4372257DE748001B347C /* appTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appTabBarController.swift; sourceTree = "<group>"; };
+		F7FF4377257DEDDF001B347C /* accountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountViewController.swift; sourceTree = "<group>"; };
+		F7FF4387257EB34F001B347C /* searchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewController.swift; sourceTree = "<group>"; };
+		F7FF4396257ECF49001B347C /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		F7FF4397257ECF49001B347C /* NewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTableViewCell.xib; sourceTree = "<group>"; };
 		FA5A4BF29E2A0A4F5380DD3D /* Pods_cmpe131_cmpe131UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmpe131_cmpe131UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,7 +143,6 @@
 				DAC3E8AE827733E8054DB32A /* Pods-cmpe131Tests.debug.xcconfig */,
 				C4EC3532ED683347BCBDF9A5 /* Pods-cmpe131Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -187,6 +206,12 @@
 			children = (
 				F7552B38257D66BA001EA28F /* Utilities.swift */,
 				F7552B42257D84A5001EA28F /* Constants.swift */,
+				F7FF4396257ECF49001B347C /* NewTableViewCell.swift */,
+				F7FF4397257ECF49001B347C /* NewTableViewCell.xib */,
+				F7ED1719258166250043D94F /* tableViewCell.swift */,
+				F7ED171E25818E5E0043D94F /* book.swift */,
+				F7A894D1258412DD00B24A67 /* detailTableView.swift */,
+				F7A894D92584214700B24A67 /* seller.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -207,6 +232,10 @@
 				F764155B257C99A100CE179E /* loginViewController.swift */,
 				F7641560257CA0C500CE179E /* createAccountViewController.swift */,
 				F7552B3D257D80CB001EA28F /* HomeViewController.swift */,
+				F7FF4372257DE748001B347C /* appTabBarController.swift */,
+				F7FF4377257DEDDF001B347C /* accountViewController.swift */,
+				F7FF4387257EB34F001B347C /* searchViewController.swift */,
+				F7383D3C25833AC000B284B3 /* forSaleViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -321,6 +350,7 @@
 			files = (
 				F7505B87257C88C900B13FAA /* LaunchScreen.storyboard in Resources */,
 				F7552B48257D8FBF001EA28F /* GoogleService-Info.plist in Resources */,
+				F7FF4399257ECF49001B347C /* NewTableViewCell.xib in Resources */,
 				F7505B84257C88C900B13FAA /* Assets.xcassets in Resources */,
 				F7505B82257C88C600B13FAA /* Main.storyboard in Resources */,
 			);
@@ -450,13 +480,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7ED171F25818E5E0043D94F /* book.swift in Sources */,
+				F7ED171A258166250043D94F /* tableViewCell.swift in Sources */,
+				F7A894DA2584214700B24A67 /* seller.swift in Sources */,
 				F7552B39257D66BA001EA28F /* Utilities.swift in Sources */,
 				F764155C257C99A100CE179E /* loginViewController.swift in Sources */,
 				F7641561257CA0C500CE179E /* createAccountViewController.swift in Sources */,
 				F7505B7F257C88C600B13FAA /* ViewController.swift in Sources */,
+				F7A894D2258412DD00B24A67 /* detailTableView.swift in Sources */,
+				F7383D3D25833AC000B284B3 /* forSaleViewController.swift in Sources */,
+				F7FF4388257EB34F001B347C /* searchViewController.swift in Sources */,
 				F7505B7B257C88C600B13FAA /* AppDelegate.swift in Sources */,
+				F7FF4398257ECF49001B347C /* NewTableViewCell.swift in Sources */,
+				F7FF4373257DE748001B347C /* appTabBarController.swift in Sources */,
 				F7552B3E257D80CB001EA28F /* HomeViewController.swift in Sources */,
 				F7505B7D257C88C600B13FAA /* SceneDelegate.swift in Sources */,
+				F7FF4378257DEDE0001B347C /* accountViewController.swift in Sources */,
 				F7552B43257D84A5001EA28F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

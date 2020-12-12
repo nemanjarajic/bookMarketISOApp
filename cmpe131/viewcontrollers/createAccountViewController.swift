@@ -94,10 +94,11 @@ class createAccountViewController: UIViewController{
     }
     func showError(_ message: String) {
         errorLabel.text = message
+        errorLabel.alpha = 1
     }
     func transitionToHome(){
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewContoller) as? HomeViewController
-        view.window?.rootViewController = homeViewController
+        let appTabBarController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.appTabBarContoller) as? appTabBarController
+        view.window?.rootViewController = appTabBarController
         view.window?.makeKeyAndVisible()
     }
 }

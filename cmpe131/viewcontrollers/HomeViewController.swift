@@ -14,6 +14,7 @@ class HomeViewController: UIViewController{
                 // Always adopt a light interface style.
                 overrideUserInterfaceStyle = .light
             }
+        
     }
     
     
