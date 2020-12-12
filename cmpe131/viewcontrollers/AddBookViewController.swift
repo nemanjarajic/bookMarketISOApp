@@ -7,10 +7,15 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class AddBookViewController: UIViewController {
     
     @IBOutlet weak var bookTitleTextField: UITextField!
+    
+    @IBOutlet weak var bookAuthorTextField: UITextField!
+   
+    @IBOutlet weak var bookYearTextField: UITextField!
     
     @IBOutlet weak var bookISBNTestField: UITextField!
 
@@ -39,7 +44,7 @@ class AddBookViewController: UIViewController {
     
     func validateFields() -> String? {
         
-        if bookTitleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookISBNTestField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+        if bookTitleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookAuthorTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookYearTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookISBNTestField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             bookConditionTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || priceTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all fields."
         }
@@ -57,11 +62,34 @@ class AddBookViewController: UIViewController {
             errorLabel.alpha = 0
             
             // add book information to data base
+            let BT = bookTitleTextField.text!
+            let BAuthor = bookAuthorTextField.text!
+            let BYear = bookYearTextField.text!
+            let ISBN = bookISBNTestField.text!
+            let BCond = bookConditionTextField.text!
+            let BPrice = priceTextField.text!
             
+            let db = Firestore.firestore()
+            
+            db.collection("books").document(ISBN).setData([
+                "title": BT,
+                "author": BAuthor,
+                "year": BYear,
+                "isbn": ISBN,
+                "condition": BCond,
+                "price": BPrice
+            ]) {
+                err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
             
             
             // Transit to book detail page
-            self.transitToBookDetailPage()
+            self.transitToSuccessPage()
             
         }
         
@@ -72,10 +100,10 @@ class AddBookViewController: UIViewController {
         errorLabel.alpha = 1
     }
 
-    func transitToBookDetailPage() {
-        let bookDetailViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.bookDetailViewController) 
+    func transitToSuccessPage() {
+        let listSuccessViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.listSuccessViewController)
         
-        view.window?.rootViewController = bookDetailViewController
+        view.window?.rootViewController = listSuccessViewController
         view.window?.makeKeyAndVisible()
     }
     

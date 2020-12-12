@@ -147,29 +147,42 @@
             </objects>
             <point key="canvasLocation" x="1979.7101449275365" y="534.375"/>
         </scene>
-        <!--Book Detail Page-->
+        <!--List Success Page-->
         <scene sceneID="cdX-7x-gqP">
             <objects>
-                <viewController storyboardIdentifier="bookDetailVC" title="List Detail Page" id="HGN-xr-Vn9" userLabel="Book Detail Page" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P1Z-py-DIj">
+                <viewController storyboardIdentifier="ListSuccessVC" title="List Detail Page" id="HGN-xr-Vn9" userLabel="List Success Page" customClass="ListSuccessViewController" customModule="cmpe131" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P1Z-py-DIj" customClass="ListSuccess">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List Detail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5W-T9-JN9">
-                                <rect key="frame" x="40" y="84" width="334" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Successful!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5W-T9-JN9">
+                                <rect key="frame" x="40" y="244" width="334" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPo-Bn-7bC">
+                                <rect key="frame" x="40" y="632" width="334" height="30"/>
+                                <state key="normal" title="Back to Home"/>
+                                <connections>
+                                    <action selector="BackToHomeTapped:" destination="HGN-xr-Vn9" eventType="touchUpInside" id="SBK-VV-Ydr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CtY-Z5-3st"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="L5W-T9-JN9" firstAttribute="top" secondItem="CtY-Z5-3st" secondAttribute="top" constant="40" id="7yZ-qS-yZD"/>
-                            <constraint firstItem="L5W-T9-JN9" firstAttribute="leading" secondItem="CtY-Z5-3st" secondAttribute="leading" constant="40" id="Ldp-s9-HHl"/>
-                            <constraint firstItem="CtY-Z5-3st" firstAttribute="trailing" secondItem="L5W-T9-JN9" secondAttribute="trailing" constant="40" id="Vmo-VT-dNN"/>
+                            <constraint firstItem="CtY-Z5-3st" firstAttribute="bottom" secondItem="fPo-Bn-7bC" secondAttribute="bottom" constant="200" id="4nf-Gk-2wR"/>
+                            <constraint firstItem="L5W-T9-JN9" firstAttribute="leading" secondItem="CtY-Z5-3st" secondAttribute="leading" constant="40" id="EEj-OX-1Xe"/>
+                            <constraint firstItem="CtY-Z5-3st" firstAttribute="trailing" secondItem="L5W-T9-JN9" secondAttribute="trailing" constant="40" id="QVj-nh-CEC"/>
+                            <constraint firstItem="L5W-T9-JN9" firstAttribute="top" secondItem="CtY-Z5-3st" secondAttribute="top" constant="200" id="pIk-Zq-OMS"/>
+                            <constraint firstItem="CtY-Z5-3st" firstAttribute="trailing" secondItem="fPo-Bn-7bC" secondAttribute="trailing" constant="40" id="rTS-vv-wKl"/>
+                            <constraint firstItem="fPo-Bn-7bC" firstAttribute="leading" secondItem="CtY-Z5-3st" secondAttribute="leading" constant="40" id="yYI-gm-wAE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backToHome" destination="fPo-Bn-7bC" id="ilb-dc-fFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQa-gH-kCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -273,7 +286,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="QAK-L5-RvQ" customClass="HomeViewController" customModule="cmpe131" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qIl-nT-ILd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azp-4M-Kcy">
@@ -403,33 +416,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Epe-Jh-W0D">
-                                <rect key="frame" x="40" y="100" width="334" height="550"/>
+                                <rect key="frame" x="40" y="100" width="334" height="590"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3vp-hp-N7r">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjQ-SB-NIz" userLabel="Author Text Field">
+                                        <rect key="frame" x="0.0" y="80" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Publication" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbi-SF-iqv" userLabel="Year Text Field">
+                                        <rect key="frame" x="0.0" y="160" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HfS-SH-hQo">
-                                        <rect key="frame" x="0.0" y="110" width="334" height="80"/>
+                                        <rect key="frame" x="0.0" y="240" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1zk-1r-Gbx">
-                                        <rect key="frame" x="0.0" y="220" width="334" height="80"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book Condition(New/Like new/Good)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1zk-1r-Gbx">
+                                        <rect key="frame" x="0.0" y="320" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selling Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aDa-T5-kl2">
-                                        <rect key="frame" x="0.0" y="330" width="334" height="80"/>
+                                        <rect key="frame" x="0.0" y="400" width="334" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="FKt-hL-dbR"/>
+                                            <constraint firstAttribute="height" constant="50" id="FKt-hL-dbR"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWZ-NN-rSF" userLabel="Submit">
-                                        <rect key="frame" x="0.0" y="440" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="480" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="f96-Kd-cIJ"/>
                                         </constraints>
@@ -440,7 +463,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsl-Zs-5C8">
-                                        <rect key="frame" x="0.0" y="520" width="334" height="30"/>
+                                        <rect key="frame" x="0.0" y="560" width="334" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="UJb-ma-ji2"/>
                                         </constraints>
@@ -452,25 +475,15 @@
                                 <constraints>
                                     <constraint firstItem="HfS-SH-hQo" firstAttribute="height" secondItem="3vp-hp-N7r" secondAttribute="height" id="6fs-l6-3fy"/>
                                     <constraint firstItem="aDa-T5-kl2" firstAttribute="height" secondItem="3vp-hp-N7r" secondAttribute="height" id="HQm-aR-dgy"/>
+                                    <constraint firstItem="jbi-SF-iqv" firstAttribute="height" secondItem="GjQ-SB-NIz" secondAttribute="height" id="MI3-vh-9Ge"/>
                                     <constraint firstItem="1zk-1r-Gbx" firstAttribute="height" secondItem="3vp-hp-N7r" secondAttribute="height" id="Whw-Bt-jSi"/>
+                                    <constraint firstItem="aDa-T5-kl2" firstAttribute="height" secondItem="GjQ-SB-NIz" secondAttribute="height" id="z16-bH-H4O"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69l-9R-m3U">
-                                <rect key="frame" x="40" y="40" width="43" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="8Os-Ho-4Av"/>
-                                </constraints>
-                                <state key="normal" title="&lt;Back"/>
-                                <connections>
-                                    <segue destination="QAK-L5-RvQ" kind="show" id="S2Y-Il-lgF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZaD-9N-DFJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="69l-9R-m3U" firstAttribute="top" secondItem="ZaD-9N-DFJ" secondAttribute="top" constant="40" id="72W-uh-WgA"/>
-                            <constraint firstItem="69l-9R-m3U" firstAttribute="leading" secondItem="ZaD-9N-DFJ" secondAttribute="leading" constant="40" id="7rh-g4-YMZ"/>
                             <constraint firstItem="Epe-Jh-W0D" firstAttribute="leading" secondItem="ZaD-9N-DFJ" secondAttribute="leading" constant="40" id="K4a-jt-5jL"/>
                             <constraint firstItem="Epe-Jh-W0D" firstAttribute="top" secondItem="ZaD-9N-DFJ" secondAttribute="top" constant="100" id="ads-MX-izo"/>
                             <constraint firstItem="ZaD-9N-DFJ" firstAttribute="trailing" secondItem="Epe-Jh-W0D" secondAttribute="trailing" constant="40" id="yhv-7r-8eE"/>
@@ -478,9 +491,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Fh5-JS-xxv"/>
                     <connections>
-                        <outlet property="bookConditionTextField" destination="1zk-1r-Gbx" id="wiN-QC-C6j"/>
+                        <outlet property="bookAuthorTextField" destination="GjQ-SB-NIz" id="Oav-Rd-KlG"/>
+                        <outlet property="bookConditionTextField" destination="1zk-1r-Gbx" id="fZb-em-hPe"/>
                         <outlet property="bookISBNTestField" destination="HfS-SH-hQo" id="oll-JN-g2J"/>
                         <outlet property="bookTitleTextField" destination="3vp-hp-N7r" id="whQ-nL-CYD"/>
+                        <outlet property="bookYearTextField" destination="jbi-SF-iqv" id="JaD-ZC-XjS"/>
                         <outlet property="errorLabel" destination="xsl-Zs-5C8" id="4KJ-c5-M2b"/>
                         <outlet property="priceTextField" destination="aDa-T5-kl2" id="MvO-oS-BaD"/>
                         <outlet property="submitButton" destination="QWZ-NN-rSF" id="uwd-km-kdm"/>
@@ -688,9 +703,6 @@
             <point key="canvasLocation" x="4060.8695652173915" y="-840.40178571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="S2Y-Il-lgF"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
