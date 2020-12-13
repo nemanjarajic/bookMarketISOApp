@@ -14,7 +14,7 @@ enum selectedSearch:Int{
 }
 
 
-class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate{
     
     
     
@@ -50,12 +50,24 @@ class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
         
-        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filterTableView(sFilter: searchBar.selectedScopeButtonIndex, text: searchText)
+        if searchText == ""{
+            filteredBooks = bookList
+        }else{
+            filterTableView(sFilter: searchBar.selectedScopeButtonIndex, text: searchText)
+        }
+        print(searchText)
         tableView.reloadData()
     }
     
@@ -73,6 +85,7 @@ class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             filteredBooks = bookList.filter { (mod) -> Bool in
                 return mod.isbn.contains(text.trimmingCharacters(in: CharacterSet(charactersIn: "0123456789").inverted))
             }
+        
         default:
             print("search filter default")
         }
@@ -108,6 +121,7 @@ class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if filteredBooks == nil{
             return bookList.count
             
@@ -122,6 +136,7 @@ class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         let tableVC = tableView.dequeueReusableCell(withIdentifier: "tableVCID") as! tableViewCell
         let thisBook: book!
         
+        //print(filteredBooks?.count)
         if filteredBooks == nil{
             thisBook = bookList[indexPath.row]
         }else{
