@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class createAccountViewController: UIViewController{
+class createAccountViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -27,6 +27,16 @@ class createAccountViewController: UIViewController{
                 // Always adopt a light interface style.
                 overrideUserInterfaceStyle = .light
             }
+        firstName.delegate = self
+        lastName.delegate = self
+        emailAddress.delegate = self
+        password.delegate = self
+        confirmPassword.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
     
     func setUpElements(){

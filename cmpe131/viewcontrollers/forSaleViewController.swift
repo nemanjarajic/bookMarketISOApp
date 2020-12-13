@@ -53,6 +53,8 @@ class forSaleViewController: UIViewController{
     }
     
     @IBAction func purchaseButtonTapped(_ sender: Any) {
+        let db = Firestore.firestore()
+        db.collection("books").document(selectedBook.docID).delete()
         transitToPurchaseSuccess()
     }
 }

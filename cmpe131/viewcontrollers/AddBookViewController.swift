@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class AddBookViewController: UIViewController {
+class AddBookViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var bookTitleTextField: UITextField!
     
@@ -35,12 +35,26 @@ class AddBookViewController: UIViewController {
                 overrideUserInterfaceStyle = .light
         }
         self.setUpElements()
+        bookTitleTextField.delegate = self
+        bookAuthorTextField.delegate = self
+        bookYearTextField.delegate = self
+        bookISBNTestField.delegate = self
+        bookConditionTextField.delegate = self
+        priceTextField.delegate = self
+        
+        
     }
     
     func setUpElements(){
         // hide the error label
         errorLabel.alpha = 0
         Utilities.fillButton(button: submitButton)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
     
     func validateFields() -> String? {

@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class loginViewController: UIViewController{
+class loginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var emailAddressIn: UITextField!
     @IBOutlet weak var passwordIn: UITextField!
     @IBOutlet weak var errorMessage: UILabel!
@@ -21,12 +21,19 @@ class loginViewController: UIViewController{
                 // Always adopt a light interface style.
                 overrideUserInterfaceStyle = .light
             }
+        emailAddressIn.delegate = self
+        passwordIn.delegate = self
     }
     
     func setUpElements(){
         Utilities.fillButton(button: signInButton)
         Utilities.styleTextField(text: emailAddressIn)
         Utilities.styleTextField(text: passwordIn)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
     @IBAction func signInClicked(_ sender: Any) {
         //validate fields
