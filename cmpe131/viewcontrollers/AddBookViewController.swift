@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class AddBookViewController: UIViewController {
     
@@ -71,13 +72,17 @@ class AddBookViewController: UIViewController {
             
             let db = Firestore.firestore()
             
+            let user = Auth.auth().currentUser;
+
             db.collection("books").document(ISBN).setData([
                 "title": BT,
                 "author": BAuthor,
                 "year": BYear,
                 "isbn": ISBN,
                 "condition": BCond,
-                "price": BPrice
+                "price": BPrice,
+                "uid": user!.uid,
+                "image": "no_image"
             ]) {
                 err in
                 if let err = err {
@@ -86,11 +91,8 @@ class AddBookViewController: UIViewController {
                     print("Document successfully written!")
                 }
             }
-            
-            
             // Transit to book detail page
             self.transitToSuccessPage()
-            
         }
         
     }
@@ -106,6 +108,5 @@ class AddBookViewController: UIViewController {
         view.window?.rootViewController = listSuccessViewController
         view.window?.makeKeyAndVisible()
     }
-    
-    
+
 }

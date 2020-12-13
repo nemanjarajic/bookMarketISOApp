@@ -10,6 +10,7 @@
 		7DE0F846743565D9FA707FA9 /* Pods_cmpe131_cmpe131UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5A4BF29E2A0A4F5380DD3D /* Pods_cmpe131_cmpe131UITests.framework */; };
 		9A8D5FB12584B38000E06A1E /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8D5FB02584B38000E06A1E /* AddBookViewController.swift */; };
 		9A8D5FC7258587F800E06A1E /* ListSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8D5FC6258587F800E06A1E /* ListSuccessViewController.swift */; };
+		9A8D5FD22585A0CD00E06A1E /* ManageBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8D5FD12585A0CD00E06A1E /* ManageBookViewController.swift */; };
 		AFC04E4B6361056CE4AA244F /* Pods_cmpe131.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5AF60F6BA9D474E6BFA6B9 /* Pods_cmpe131.framework */; };
 		F7383D3D25833AC000B284B3 /* forSaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7383D3C25833AC000B284B3 /* forSaleViewController.swift */; };
 		F7505B7B257C88C600B13FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7505B7A257C88C600B13FAA /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		7471AB4DC674900FC46DEF6C /* Pods-cmpe131-cmpe131UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmpe131-cmpe131UITests.release.xcconfig"; path = "Target Support Files/Pods-cmpe131-cmpe131UITests/Pods-cmpe131-cmpe131UITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A8D5FB02584B38000E06A1E /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		9A8D5FC6258587F800E06A1E /* ListSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSuccessViewController.swift; sourceTree = "<group>"; };
+		9A8D5FD12585A0CD00E06A1E /* ManageBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBookViewController.swift; sourceTree = "<group>"; };
 		C195CF09438DDF28A83FE22D /* Pods_cmpe131Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cmpe131Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EC3532ED683347BCBDF9A5 /* Pods-cmpe131Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmpe131Tests.release.xcconfig"; path = "Target Support Files/Pods-cmpe131Tests/Pods-cmpe131Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DAC3E8AE827733E8054DB32A /* Pods-cmpe131Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cmpe131Tests.debug.xcconfig"; path = "Target Support Files/Pods-cmpe131Tests/Pods-cmpe131Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				F7383D3C25833AC000B284B3 /* forSaleViewController.swift */,
 				9A8D5FB02584B38000E06A1E /* AddBookViewController.swift */,
 				9A8D5FC6258587F800E06A1E /* ListSuccessViewController.swift */,
+				9A8D5FD12585A0CD00E06A1E /* ManageBookViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				F764155C257C99A100CE179E /* loginViewController.swift in Sources */,
 				F7641561257CA0C500CE179E /* createAccountViewController.swift in Sources */,
 				F7505B7F257C88C600B13FAA /* ViewController.swift in Sources */,
+				9A8D5FD22585A0CD00E06A1E /* ManageBookViewController.swift in Sources */,
 				F7A894D2258412DD00B24A67 /* detailTableView.swift in Sources */,
 				F7383D3D25833AC000B284B3 /* forSaleViewController.swift in Sources */,
 				F7FF4388257EB34F001B347C /* searchViewController.swift in Sources */,
