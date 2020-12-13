@@ -81,7 +81,8 @@ class AddBookViewController: UIViewController {
                 "isbn": ISBN,
                 "condition": BCond,
                 "price": BPrice,
-                "uid": user!.uid
+                "uid": user!.uid,
+                "image": "no_image"
             ]) {
                 err in
                 if let err = err {

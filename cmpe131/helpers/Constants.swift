@@ -12,5 +12,6 @@ struct Constants{
         static let appTabBarContoller = "itemVC"
         static let returnToLogin = "viewVC"
         static let listSuccessViewController = "ListSuccessVC"
+        static let ManageBookViewController = "manageBookVC"
     }
 }
