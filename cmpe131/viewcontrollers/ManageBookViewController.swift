@@ -54,7 +54,7 @@ class ManageBookViewController: UIViewController {
                     }else{
                         image = item.data()["image"] as! String
                     }
-                    let newBook = book(title: item.data()["title"] as! String, isbn: item.data()["isbn"] as! String, imageName: image, condition: item.data()["condition"]as! String, price: item.data()["price"] as! String)
+                    let newBook = book(title: item.data()["title"] as! String, isbn: item.data()["isbn"] as! String, imageName: image, condition: item.data()["condition"]as! String, price: item.data()["price"] as! String, docID: item.documentID)
 
                     self.bookList.append(newBook)
                 }

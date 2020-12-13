@@ -13,5 +13,6 @@ struct Constants{
         static let returnToLogin = "viewVC"
         static let listSuccessViewController = "ListSuccessVC"
         static let ManageBookViewController = "manageBookVC"
+        static let purchaseSuccessful = "pSuccessVC"
     }
 }

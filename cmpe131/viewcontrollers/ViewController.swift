@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
     @IBOutlet weak var signInButotn: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
@@ -21,15 +21,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 overrideUserInterfaceStyle = .light
             }
         //for messaging
-        myTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        myTable.delegate = self
-        myTable.dataSource = self
+        //myTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+       // myTable.delegate = self
+        //myTable.dataSource = self
     }
     
     func setUpElements(){
         Utilities.fillButton(button: signInButotn)
         Utilities.fillButton(button: createAccountButton)
     }
+    /*
     //for messaging
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -50,6 +51,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationController?.pushViewController(vc, animated: true)
         
     }
-
+*/
 }
 

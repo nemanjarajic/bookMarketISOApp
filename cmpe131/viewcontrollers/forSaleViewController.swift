@@ -18,6 +18,7 @@ class forSaleViewController: UIViewController{
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
     
+    
 
     var selectedBook: book!
     
@@ -45,5 +46,13 @@ class forSaleViewController: UIViewController{
     }
     
     
+    func transitToPurchaseSuccess() {
+        let pSuccess = storyboard?.instantiateViewController(identifier: Constants.Storyboard.purchaseSuccessful) as? purchaseSuccessful
+        view.window?.rootViewController = pSuccess
+        view.window?.makeKeyAndVisible()
+    }
     
+    @IBAction func purchaseButtonTapped(_ sender: Any) {
+        transitToPurchaseSuccess()
+    }
 }

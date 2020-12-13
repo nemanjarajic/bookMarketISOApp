@@ -188,6 +188,51 @@
             </objects>
             <point key="canvasLocation" x="3570" y="1432"/>
         </scene>
+        <!--Purchase Successful-->
+        <scene sceneID="EOr-B4-lIu">
+            <objects>
+                <viewController storyboardIdentifier="pSuccessVC" id="TvV-vH-u7r" customClass="purchaseSuccessful" customModule="cmpe131" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G3G-kU-uXf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchase was Successful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxK-R5-9S7">
+                                <rect key="frame" x="86.5" y="134" width="241" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgf-Xl-807">
+                                <rect key="frame" x="110" y="317" width="194" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DHc-e9-B1h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="RETURN HOME"/>
+                                <connections>
+                                    <action selector="returnHomeTapped:" destination="TvV-vH-u7r" eventType="touchUpInside" id="hq2-K8-jhL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lqQ-vr-ctn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vgf-Xl-807" firstAttribute="centerX" secondItem="G3G-kU-uXf" secondAttribute="centerX" id="5F1-ZF-WQt"/>
+                            <constraint firstItem="AxK-R5-9S7" firstAttribute="top" secondItem="lqQ-vr-ctn" secondAttribute="top" constant="90" id="KRj-TJ-tZk"/>
+                            <constraint firstItem="Vgf-Xl-807" firstAttribute="top" secondItem="AxK-R5-9S7" secondAttribute="bottom" constant="156" id="WlQ-yc-8eQ"/>
+                            <constraint firstItem="AxK-R5-9S7" firstAttribute="centerX" secondItem="G3G-kU-uXf" secondAttribute="centerX" id="aed-em-Atb"/>
+                            <constraint firstItem="Vgf-Xl-807" firstAttribute="leading" secondItem="lqQ-vr-ctn" secondAttribute="leading" constant="110" id="j6q-Le-3of"/>
+                            <constraint firstItem="lqQ-vr-ctn" firstAttribute="trailing" secondItem="Vgf-Xl-807" secondAttribute="trailing" constant="110" id="wZa-Vb-wfe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="returnHomeButton" destination="Vgf-Xl-807" id="YjB-Gq-uxp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgM-za-jhf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4372" y="1470"/>
+        </scene>
         <!--Create Account View Controller-->
         <scene sceneID="Qp3-0Q-MEB">
             <objects>
@@ -647,6 +692,9 @@
                                     <constraint firstAttribute="height" constant="40" id="exa-2o-xD2"/>
                                 </constraints>
                                 <state key="normal" title="PURCHASE"/>
+                                <connections>
+                                    <action selector="purchaseButtonTapped:" destination="4Kb-6m-MNW" eventType="touchUpInside" id="gVF-Gg-UnL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sdh-8w-Tra"/>
@@ -675,7 +723,7 @@
                         <outlet property="bookTitle" destination="5cS-Sn-JgT" id="xd5-Nx-VcO"/>
                         <outlet property="conditionLabel" destination="LmE-vO-p3I" id="OuN-gl-OQC"/>
                         <outlet property="priceLabel" destination="kFc-QI-hnd" id="cdZ-gP-hqB"/>
-                        <outlet property="purchaseButton" destination="sRR-dZ-ror" id="98x-pk-RIQ"/>
+                        <outlet property="purchaseButton" destination="sRR-dZ-ror" id="Rok-kH-UTk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWq-Qf-OUt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
