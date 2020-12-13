@@ -28,6 +28,7 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    // initialize the page
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -45,6 +46,7 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    // formatting the page
     func setUpElements(){
         // hide the error label
         errorLabel.alpha = 0
@@ -57,6 +59,7 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    // check if the user enters the valid inputs
     func validateFields() -> String? {
         
         if bookTitleTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookAuthorTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookYearTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || bookISBNTestField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -66,6 +69,7 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         return nil
     }
 
+    // save the entered input of the book to the database
     @IBAction func submitTapped(_ sender: Any) {
         // validate the fields
 
@@ -111,11 +115,14 @@ class AddBookViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    // prompt error message
     func showErr(_ message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
-
+    
+    
+    // function go to the list success view controller
     func transitToSuccessPage() {
         let listSuccessViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.listSuccessViewController)
         

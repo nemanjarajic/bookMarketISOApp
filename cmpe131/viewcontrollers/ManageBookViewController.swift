@@ -36,6 +36,8 @@ class ManageBookViewController: UIViewController {
     
     var bookList = [book]()
     
+    // get all the books from database
+    // and shows the ones listed by the current user
     func getBooks(){
         let user = Auth.auth().currentUser;
         let db = Firestore.firestore()
@@ -67,6 +69,7 @@ class ManageBookViewController: UIViewController {
     }
 }
 
+// let the user interacts with the page
 extension ManageBookViewController:UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,6 +93,7 @@ extension ManageBookViewController:UITableViewDelegate {
     }
 }
 
+// update the data for table rows
 extension ManageBookViewController:UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

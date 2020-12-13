@@ -13,6 +13,7 @@ class ListSuccessViewController: UIViewController {
     
     @IBOutlet weak var backToHome: UIButton!
     
+    // initialize the page
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {
@@ -22,6 +23,7 @@ class ListSuccessViewController: UIViewController {
         self.setUpElements()
     }
     
+    // formatting the page
     func setUpElements(){
         // hide the error label
         Utilities.fillButton(button: backToHome)
@@ -32,6 +34,7 @@ class ListSuccessViewController: UIViewController {
         
     }
     
+    // go to home page
     func transitionToHome(){
         let appTabBarController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.appTabBarContoller) as? appTabBarController
         view.window?.rootViewController = appTabBarController

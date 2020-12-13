@@ -40,6 +40,8 @@ class EditBookViewController: UIViewController {
         let user = Auth.auth().currentUser
         
         let docRef = db.collection("books")
+        
+        // get information from database for current selected book
         docRef.getDocuments { (snapshot, err) in
             if err != nil{
                 print("error in accessing data")
@@ -71,6 +73,7 @@ class EditBookViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // save the updated book details to data base
     @IBAction func updateTapped(_ sender: Any) {
         let BT = bookTitleTextField.text!
         let BAuthor = bookAuthorTextField.text!
