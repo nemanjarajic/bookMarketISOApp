@@ -549,6 +549,7 @@
                     <navigationItem key="navigationItem" id="KTD-HJ-vXT"/>
                     <connections>
                         <outlet property="manageBookTable" destination="QMQ-gX-SsM" id="ihi-ng-opS"/>
+                        <segue destination="BfI-rn-dqv" kind="presentation" identifier="editBook" id="UGM-87-6lf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMm-BX-Tbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -856,6 +857,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFw-s3-SKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4060.8695652173915" y="-840.40178571428567"/>
+        </scene>
+        <!--Edit Book View Controller-->
+        <scene sceneID="zfo-oi-hmR">
+            <objects>
+                <viewController storyboardIdentifier="editBookVC" title="Add a Book View Controller" id="BfI-rn-dqv" userLabel="Edit Book View Controller" customClass="EditBookViewController" customModule="cmpe131" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PyV-Nm-FWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Q7m-LF-k4O">
+                                <rect key="frame" x="40" y="100" width="334" height="530"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CE1-ii-Zcq" userLabel="book Title Text Field">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBc-an-b5D" userLabel="book Author Text Field">
+                                        <rect key="frame" x="0.0" y="80" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBn-eP-eCx" userLabel="book Year Text Field">
+                                        <rect key="frame" x="0.0" y="160" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Book ISBN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-xN-HVX" userLabel="Book ISBN Text Field">
+                                        <rect key="frame" x="0.0" y="240" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5J-V6-5j8" userLabel="book Condition Text Field">
+                                        <rect key="frame" x="0.0" y="320" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZWD-Cj-F4M" userLabel="book Price Text Field">
+                                        <rect key="frame" x="0.0" y="400" width="334" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAN-wA-SWe" userLabel="Update">
+                                        <rect key="frame" x="0.0" y="480" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DRf-NL-ytx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Update"/>
+                                        <connections>
+                                            <action selector="updateTapped:" destination="BfI-rn-dqv" eventType="touchUpInside" id="c9y-Vl-DWu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fBn-eP-eCx" firstAttribute="height" secondItem="CE1-ii-Zcq" secondAttribute="height" id="38J-No-J9F"/>
+                                    <constraint firstItem="kAN-wA-SWe" firstAttribute="height" secondItem="ZWD-Cj-F4M" secondAttribute="height" id="Edk-Bb-mST"/>
+                                    <constraint firstItem="e5J-V6-5j8" firstAttribute="height" secondItem="CE1-ii-Zcq" secondAttribute="height" id="Fiq-F4-7vO"/>
+                                    <constraint firstItem="MBc-an-b5D" firstAttribute="height" secondItem="CE1-ii-Zcq" secondAttribute="height" id="M6r-It-qNA"/>
+                                    <constraint firstItem="kAN-wA-SWe" firstAttribute="height" secondItem="CE1-ii-Zcq" secondAttribute="height" id="ctV-iB-lCn"/>
+                                    <constraint firstItem="jaS-xN-HVX" firstAttribute="height" secondItem="CE1-ii-Zcq" secondAttribute="height" id="r5f-gm-jpJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kMf-rP-X6X"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kMf-rP-X6X" firstAttribute="trailing" secondItem="Q7m-LF-k4O" secondAttribute="trailing" constant="40" id="9Uh-zB-80z"/>
+                            <constraint firstItem="Q7m-LF-k4O" firstAttribute="top" secondItem="kMf-rP-X6X" secondAttribute="top" constant="100" id="gcb-S5-dLe"/>
+                            <constraint firstItem="Q7m-LF-k4O" firstAttribute="leading" secondItem="kMf-rP-X6X" secondAttribute="leading" constant="40" id="oDs-68-p88"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wmh-pR-F30"/>
+                    <connections>
+                        <outlet property="bookAuthorTextField" destination="MBc-an-b5D" id="k8L-HK-fd2"/>
+                        <outlet property="bookConditionTextField" destination="e5J-V6-5j8" id="xI7-lc-5pD"/>
+                        <outlet property="bookISBNTextField" destination="jaS-xN-HVX" id="oQ7-OT-nR6"/>
+                        <outlet property="bookPriceTextField" destination="ZWD-Cj-F4M" id="FfE-9r-xfa"/>
+                        <outlet property="bookTitleTextField" destination="CE1-ii-Zcq" id="Ogd-Uw-Wov"/>
+                        <outlet property="bookYearTextField" destination="fBn-eP-eCx" id="75a-lM-G2g"/>
+                        <outlet property="updateButton" destination="kAN-wA-SWe" id="XYQ-bN-Y5V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dl0-ll-AHW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813" y="1432"/>
         </scene>
     </scenes>
     <resources>

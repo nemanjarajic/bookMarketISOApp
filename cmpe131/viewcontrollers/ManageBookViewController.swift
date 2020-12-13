@@ -14,6 +14,8 @@ class ManageBookViewController: UIViewController {
     
     @IBOutlet weak var manageBookTable: UITableView!
     
+    var bookISBN = ""
+    
     var filteredBooks: [book]?
     
     override func viewDidLoad() {
@@ -71,11 +73,19 @@ extension ManageBookViewController:UITableViewDelegate {
         
         print("tapped")
         
-        
         // Go to the book Modification page
+        let thisBook: book!
+        thisBook = bookList[indexPath.row]
         
+        self.bookISBN = thisBook.isbn
         
+        performSegue(withIdentifier: "editBook", sender: self)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! EditBookViewController
+        vc.bookISBN = self.bookISBN
         
     }
 }

@@ -14,5 +14,6 @@ struct Constants{
         static let listSuccessViewController = "ListSuccessVC"
         static let ManageBookViewController = "manageBookVC"
         static let purchaseSuccessful = "pSuccessVC"
+        static let EditBookViewController = "editBookVC"
     }
 }
