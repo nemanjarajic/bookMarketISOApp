@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQa-gH-kCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1968" y="1258"/>
+            <point key="canvasLocation" x="3293" y="1424"/>
         </scene>
         <!--Create Account View Controller-->
         <scene sceneID="Qp3-0Q-MEB">
@@ -289,24 +289,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azp-4M-Kcy">
-                                <rect key="frame" x="163" y="438" width="88" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Home Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azp-4M-Kcy">
+                                <rect key="frame" x="163" y="142" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5u-7b-1wB">
-                                <rect key="frame" x="153" y="180" width="108" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5u-7b-1wB">
+                                <rect key="frame" x="40" y="302" width="334" height="108"/>
                                 <state key="normal" title="ADD LISTING"/>
                                 <connections>
                                     <segue destination="lXE-Mb-5g2" kind="show" id="1g2-zY-sv6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NF-ad-tTb">
+                                <rect key="frame" x="135" y="506" width="144" height="79"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BL7-3g-OGv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BL7-3g-OGv" firstAttribute="trailing" secondItem="B5u-7b-1wB" secondAttribute="trailing" constant="40" id="7De-Pk-7sC"/>
+                            <constraint firstItem="3NF-ad-tTb" firstAttribute="top" secondItem="B5u-7b-1wB" secondAttribute="bottom" constant="8" symbolic="YES" id="Hpo-JN-fbT"/>
+                            <constraint firstItem="B5u-7b-1wB" firstAttribute="leading" secondItem="BL7-3g-OGv" secondAttribute="leading" constant="40" id="QwD-Tz-0ba"/>
+                            <constraint firstItem="B5u-7b-1wB" firstAttribute="top" secondItem="Azp-4M-Kcy" secondAttribute="bottom" constant="135" id="k6s-jt-EBU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="UWp-8v-NHX"/>
                     <navigationItem key="navigationItem" id="TVf-4b-x68"/>
