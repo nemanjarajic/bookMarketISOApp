@@ -72,7 +72,7 @@ class AddBookViewController: UIViewController {
             
             let db = Firestore.firestore()
             
-            let user = Auth.auth().currentUser;
+            let user = Auth.auth().currentUser
 
             db.collection("books").document(ISBN).setData([
                 "title": BT,
