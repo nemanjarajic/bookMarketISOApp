@@ -8,15 +8,18 @@
 import UIKit
 import Firebase
 
-class forSaleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class forSaleViewController: UIViewController{
     
     
+    @IBOutlet weak var bookTitle: UILabel!
+    
+    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var purchaseButton: UIButton!
+    
+
     var selectedBook: book!
-    
-    var bookForSale = [seller]()
-    
-    
-    
     
     @IBOutlet weak var sellerTableView: UITableView!
     
@@ -27,37 +30,20 @@ class forSaleViewController: UIViewController, UITableViewDelegate, UITableViewD
                 overrideUserInterfaceStyle = .light
             }
         getSellers()
+        setUpElement()
     }
     
+    func setUpElement(){
+        Utilities.fillButton(button: purchaseButton)
+    }
     func getSellers(){
-        let temp = seller(title: "title", quality: "new", price: "price", email: "email")
-        bookForSale.append(temp)
-        let db = Firestore.firestore()
-        let docRef = db.collection("books").document(selectedBook.isbn).collection("for_sale")
-        
-        docRef.getDocuments { (snapshot, err) in
-            if err != nil{
-                print("Error getting data")
-            }else{
-                for item in snapshot!.documents{
-                    print(item)
-                }
-            }
-        }
+        bookTitle.text = selectedBook.title
+        bookImage.image = UIImage (named: selectedBook.imageName)
+        conditionLabel.text = "Condition: " + selectedBook.condition
+        priceLabel.text = "Price: $" + selectedBook.price
             
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bookForSale.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableVC = tableView.dequeueReusableCell(withIdentifier: "detailVCID") as! detailTableView
-        
-        let thisBook = bookForSale[indexPath.row]
-        tableVC.bookTitle.text = selectedBook.title
-        
-        return tableVC
-    }
     
 }

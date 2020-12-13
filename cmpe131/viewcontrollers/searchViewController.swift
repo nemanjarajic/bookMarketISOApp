@@ -55,18 +55,14 @@ class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        if(searchText == ""){
-            
-        }
-        
         filterTableView(sFilter: searchBar.selectedScopeButtonIndex, text: searchText)
         tableView.reloadData()
     }
     
+    
+    
     func filterTableView(sFilter: Int, text: String){
-        if(text == ""){
-            filteredBooks = bookList
-        }
+    
         
         switch sFilter {
         case selectedSearch.title.rawValue:
@@ -95,7 +91,13 @@ class searchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
             }else{
                 
                 for item in snapshot!.documents{
-                    let newBook = book(title: item.data()["title"] as! String, isbn: item.data()["isbn"] as! String, imageName: item.data()["image"] as! String)
+                    var image = ""
+                    if item.data()["image"] == nil{
+                        image = "defualt"
+                    }else{
+                        image = item.data()["image"] as! String
+                    }
+                    let newBook = book(title: item.data()["title"] as! String, isbn: item.data()["isbn"] as! String, imageName: image, condition: item.data()["condition"]as! String, price: item.data()["price"] as! String)
                     self.bookList.append(newBook)
                 }
                 

@@ -11,10 +11,14 @@ class book{
     var title: String!
     var isbn: String!
     var imageName: String!
+    var condition: String!
+    var price: String!
     
-    public init(title:String, isbn:String,imageName:String){
+    public init(title:String, isbn:String,imageName:String, condition:String, price:String){
         self.title = title
         self.isbn = isbn
         self.imageName = imageName
+        self.condition = condition
+        self.price = price
     }
 }
